@@ -1,0 +1,5 @@
+/target
+/.direnv/
+/.wrangler/
+/static/out.css
+node_modules/
