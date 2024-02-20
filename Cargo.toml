@@ -14,7 +14,7 @@ crate-type = ["cdylib"]
 worker = "0.0.17"
 
 [profile.release]
-opt-levle = "s" # optimize for size
+opt-level = "s" # optimize for size
 lto = true
 strip = true
 codegen-units = 1

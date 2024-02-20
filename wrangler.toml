@@ -3,4 +3,7 @@ main = "build/worker/shim.mjs"
 compatibility_date = "2023-06-28"
 
 [build]
-command = "cargo install -q worker-build && worker-build --release"
+command = "worker-build --release"
+
+[env.dev]
+build = { command = "worker-build --dev" }

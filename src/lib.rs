@@ -11,7 +11,7 @@ async fn main(_req: Request, _env: Env, _ctx: Context) -> Result<Response> {
         <body>
             <h1>Hello, World!</h1>
             <p>Hello, World! 2</p>
-            <p>Hello, World! 7</p>
+            <p>Hello, World! 12</p>
         </body>
     </html>
     "#,

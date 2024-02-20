@@ -12,7 +12,7 @@ _default:
 
 # Serve site locally (for development)
 dev-serve:
-    wrangler dev --live-reload
+    wrangler dev --live-reload --env dev
 
 # Build the Rust function as wasm and trigger a pages dev reload
 # dev-build-rust:
