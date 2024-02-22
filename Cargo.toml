@@ -11,7 +11,8 @@ wasm-opt = false
 crate-type = ["cdylib"]
 
 [dependencies]
-worker = "0.0.17"
+maud = "0.26.0"
+worker = "0.0.18"
 
 [profile.release]
 opt-level = "s" # optimize for size
