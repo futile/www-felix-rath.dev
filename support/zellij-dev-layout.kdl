@@ -1,0 +1,30 @@
+// see https://zellij.dev/documentation/creating-a-layout#tab-templates
+layout {
+  default_tab_template {
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+    children
+    pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  tab name="wrangler dev" focus=true {
+    pane command="just" {
+      args "dev-serve"
+    }
+  }
+
+  tab name="watch tailwind" {
+    pane command="just" {
+      args "dev-build-tailwind"
+    }
+  }
+
+//   tab name="watch rust" {
+//     pane command="just" {
+//       args "dev-build-rust"
+//     }
+//   }
+}

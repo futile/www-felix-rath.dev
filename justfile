@@ -12,14 +12,14 @@ _default:
 
 # Serve site locally (for development)
 dev-serve:
-    wrangler dev --live-reload --env dev
+    wrangler dev --live-reload --env dev --assets ./static
 
 # Build the Rust function as wasm and trigger a pages dev reload
 # dev-build-rust:
 #     cargo watch --shell "wasm-pack build && touch functions/index.js" --watch Cargo.toml --watch Cargo.lock --watch src/
 
-# dev-build-tailwind:
-#     tailwindcss -i ./input.css -o ./static/out.css --watch
+dev-build-tailwind:
+    tailwindcss -i ./input.css -o ./static/out.css --watch
 
 # Build the project once, so it's ready to deploy
 # build:
@@ -31,6 +31,6 @@ dev-serve:
 #     wrangler pages deploy --project-name=felix-rath-dot-dev static/
 
 dev-zellij:
-    # zellij --session "www-felix-rath-dot-dev-dev" --layout "support/zellij-dev-layout.kdl"
+    zellij --session "www-felix-rath-dot-dev_workers-dev" --layout "support/zellij-dev-layout.kdl" options --session-serialization=false
     # # wrangler somehow survives the zellij shutdown, so kill it manually.
-    # killall wrangler
+    killall wrangler

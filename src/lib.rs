@@ -6,11 +6,12 @@ fn main_page() -> Markup {
         (DOCTYPE)
         head {
             title { "Hello, Maud!" }
+            link rel="stylesheet" type="text/css" href="./out.css";
         }
         body {
-            h1 { "Hello, Maud-Title!" }
+            h1 .text-2xl { "Hello, Maud-Title!" }
+            p .italic { "Hello, World! 1" }
             p { "Hello, World! 2" }
-            p { "Hello, World! 22" }
         }
     }
 }
