@@ -8,14 +8,15 @@ fn main_page() -> Markup {
     let heading_color = "text-[#FBFADA]";
 
     html! {
-        html {
-            (DOCTYPE)
+        (DOCTYPE)
+        // reference for the height-stuff: https://dev.to/fenok/stretching-body-to-full-viewport-height-the-missing-way-2ghd
+        html .min-h-full .flex .flex-col {
             head {
                 link rel="stylesheet" type="text/css" href="./out.css";
                 meta charset="utf-8";
                 title { "felix-rath.dev" }
             }
-            body .grid .grid-columns-1 ."[grid-template-rows:_auto_1fr_auto_auto]" .w-full .h-full .justify-stretch {
+            body .grow .grid .grid-columns-1 ."[grid-template-rows:_auto_1fr_auto_auto]" .w-full .h-full .justify-stretch {
                 div .w-full .flex .flex-col ."p-8" .(bg_top) {
                     div .w-full .flex .justify-center {
                         h1 .font-bold .font-mono .text-9xl .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
