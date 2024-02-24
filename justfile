@@ -14,23 +14,15 @@ _default:
 dev-serve:
     wrangler dev --live-reload --env dev --assets ./static
 
-# Build the Rust function as wasm and trigger a pages dev reload
-# dev-build-rust:
-#     cargo watch --shell "wasm-pack build && touch functions/index.js" --watch Cargo.toml --watch Cargo.lock --watch src/
-
+# Build and watch tailwind CSS
 dev-build-tailwind:
     tailwindcss -i ./input.css -o ./static/out.css --watch
 
-# Build the project once, so it's ready to deploy
-# build:
-#     tailwindcss -i ./input.css -o ./static/out.css
-#     wasm-pack build
-
-# Deploy to Cloudflare Pages
-# deploy: build
-#     wrangler pages deploy --project-name=felix-rath-dot-dev static/
+# Deploy to Cloudflare Workers
+deploy:
+    wrangler deploy --assets static/
 
 dev-zellij:
     zellij --session "www-felix-rath-dot-dev_workers-dev" --layout "support/zellij-dev-layout.kdl" options --session-serialization=false
-    # # wrangler somehow survives the zellij shutdown, so kill it manually.
-    killall wrangler
+    # wrangler somehow survives the zellij shutdown, so kill it manually.
+    killall wrangler || true

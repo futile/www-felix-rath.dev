@@ -1,4 +1,4 @@
-name = "worker-rust"
+name = "felix-rath-dot-dev"
 main = "build/worker/shim.mjs"
 compatibility_date = "2023-06-28"
 
