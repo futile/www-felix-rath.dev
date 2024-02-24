@@ -795,14 +795,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "worker-rust"
-version = "0.1.0"
-dependencies = [
- "maud",
- "worker",
-]
-
-[[package]]
 name = "worker-sys"
 version = "0.0.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -812,4 +804,12 @@ dependencies = [
  "js-sys",
  "wasm-bindgen",
  "web-sys",
+]
+
+[[package]]
+name = "www-felix-rath-dot-dev"
+version = "0.1.0"
+dependencies = [
+ "maud",
+ "worker",
 ]
