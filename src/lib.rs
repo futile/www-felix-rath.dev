@@ -8,31 +8,33 @@ fn main_page() -> Markup {
     let heading_color = "text-[#FBFADA]";
 
     html! {
-        (DOCTYPE)
-        head {
-            link rel="stylesheet" type="text/css" href="./out.css";
-            meta charset="utf-8";
-            title { "felix-rath.dev" }
-        }
-        body .grid .grid-columns-1 ."[grid-template-rows:_auto_1fr_auto_auto]" .w-full .h-full .justify-stretch {
-            div .w-full .flex .flex-col ."p-8" .(bg_top) {
-                div .w-full .flex .justify-center {
-                    h1 .font-bold .font-mono .text-9xl .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
-                }
+        html {
+            (DOCTYPE)
+            head {
+                link rel="stylesheet" type="text/css" href="./out.css";
+                meta charset="utf-8";
+                title { "felix-rath.dev" }
             }
-            div .(bg_main) .w-full .(text_color) .text-xl .flex .justify-center .text-center ."p-8" .pb-16 {
-                div .flex .flex-col .justify-center .align-center .gap-y-4 {
-                    @for line in LOREM_IPSUM.lines() {
-                        p .max-w-prose  { (line) }
+            body .grid .grid-columns-1 ."[grid-template-rows:_auto_1fr_auto_auto]" .w-full .h-full .justify-stretch {
+                div .w-full .flex .flex-col ."p-8" .(bg_top) {
+                    div .w-full .flex .justify-center {
+                        h1 .font-bold .font-mono .text-9xl .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
                     }
                 }
-            }
-            div .(bg_main) .w-full .flex .justify-center .align-center ."p-8" .text-lg .border-t-2 ."border-[#436850]" .(text_color) .gap-x-2 {
-                span { "2024 by Felix Rath" }
-                span { "•" }
-                div {
-                    span { "Source for this site on " }
-                    a href="https://github.com/futile/www-felix-rath.dev" target="_blank" .(heading_color) { "github ↗" };
+                div .(bg_main) .w-full .(text_color) .text-xl .flex .justify-center .text-center ."p-8" .pb-16 {
+                    div .flex .flex-col .justify-center .align-center .gap-y-4 {
+                        @for line in LOREM_IPSUM.lines().filter(|l| l.len() > 0) {
+                            p .max-w-prose  { (line) }
+                        }
+                    }
+                }
+                div .(bg_main) .w-full .flex .justify-center .align-center ."p-8" .text-lg .border-t-2 ."border-[#436850]" .(text_color) .gap-x-2 {
+                    span { "2024 by Felix Rath" }
+                    span { "•" }
+                    div {
+                        span { "Source for this site on " }
+                        a href="https://github.com/futile/www-felix-rath.dev" target="_blank" .(heading_color) { "github ↗" };
+                    }
                 }
             }
         }
