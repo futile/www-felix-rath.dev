@@ -22,7 +22,8 @@ dev-build-tailwind:
 deploy:
     wrangler deploy --assets static/
 
+# Run zellij as a dev-environment, with automated rebuilds etc.
 dev-zellij:
-    zellij --session "www-felix-rath-dot-dev_workers-dev" --layout "support/zellij-dev-layout.kdl" options --session-serialization=false
+    zellij --session "www-felix-rath-dot-dev" --layout "support/zellij-dev-layout.kdl" options --session-serialization=false
     # wrangler somehow survives the zellij shutdown, so kill it manually.
     killall wrangler || true
