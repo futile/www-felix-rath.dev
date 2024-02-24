@@ -12,9 +12,16 @@ fn main_page() -> Markup {
         // reference for the height-stuff: https://dev.to/fenok/stretching-body-to-full-viewport-height-the-missing-way-2ghd
         html .min-h-full .flex .flex-col {
             head {
-                link rel="stylesheet" type="text/css" href="./out.css";
                 meta charset="utf-8";
+
                 title { "felix-rath.dev" }
+
+                link rel="stylesheet" type="text/css" href="/out.css";
+
+                link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png";
+                link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png";
+                link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png";
+                link rel="manifest" href="/site.webmanifest";
             }
             body .grow .grid .grid-columns-1 ."[grid-template-rows:_auto_1fr_auto_auto]" .w-full .h-full .justify-stretch {
                 div .w-full .flex .flex-col ."p-8" .(bg_top) {
