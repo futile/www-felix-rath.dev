@@ -12,7 +12,7 @@ fn main_page() -> Markup {
         head {
             link rel="stylesheet" type="text/css" href="./out.css";
             meta charset="utf-8";
-            title { "Hello, Maud!" }
+            title { "felix-rath.dev" }
         }
         body .grid .grid-columns-1 ."[grid-template-rows:_auto_1fr_auto_auto]" .w-full .h-full .justify-stretch {
             div .w-full .flex .flex-col ."p-8" .(bg_top) {
