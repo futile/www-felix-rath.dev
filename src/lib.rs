@@ -10,8 +10,9 @@ fn main_page() -> Markup {
     html! {
         (DOCTYPE)
         head {
-            title { "Hello, Maud!" }
             link rel="stylesheet" type="text/css" href="./out.css";
+            meta charset="utf-8";
+            title { "Hello, Maud!" }
         }
         body .grid .grid-columns-1 ."[grid-template-rows:_auto_1fr_auto_auto]" .w-full .h-full .justify-stretch {
             div .w-full .flex .flex-col ."p-8" .(bg_top) {
@@ -26,8 +27,13 @@ fn main_page() -> Markup {
                     }
                 }
             }
-            div .(bg_main) .w-full .flex .justify-center .align-center ."p-8" .text-lg .border-t-2 ."border-[#436850]" {
-                p .(text_color) { "2024 by Felix Rath" }
+            div .(bg_main) .w-full .flex .justify-center .align-center ."p-8" .text-lg .border-t-2 ."border-[#436850]" .(text_color) .gap-x-2 {
+                span { "2024 by Felix Rath" }
+                span { "•" }
+                div {
+                    span { "Source for this site on " }
+                    a href="https://github.com/futile/www-felix-rath.dev" target="_blank" .(heading_color) { "github ↗" };
+                }
             }
         }
     }
