@@ -6,6 +6,7 @@ fn main_page() -> Markup {
     let bg_main = "bg-[#12372A]";
     let text_color = "text-[#ADBC9F]";
     let heading_color = "text-[#FBFADA]";
+    let text_dark = "text-[#12372A]";
 
     html! {
         (DOCTYPE)
@@ -27,6 +28,16 @@ fn main_page() -> Markup {
                 div .w-full .flex .flex-col ."p-8" .(bg_top) {
                     div .w-full .flex .justify-center {
                         h1 .font-bold .font-mono .text-9xl .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
+                    }
+                    div .w-full .flex .justify-center .gap-x-2 {
+                        @let text_shadow = "[text-shadow:_2px_2px_3px_black]";
+                        span .text-2xl .(text_color) .(text_shadow) {
+                            span .(heading_color) { "Software Developer." }
+                            r#"
+                                I like building reliable code and systems.
+                                <3 Rust, Linux, Git, NixOS, Scala, Neovim & OpenSource.
+                            "#
+                        }
                     }
                 }
                 div .(bg_main) .w-full .(text_color) .text-xl .flex .justify-center .text-center ."p-8" .pb-16 {
