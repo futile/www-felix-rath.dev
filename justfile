@@ -18,6 +18,10 @@ dev-serve:
 dev-build-tailwind:
     tailwindcss -i ./input.css -o ./static/out.css --watch
 
+# Upgrade Cargo dependencies, including breaking changes etc.
+upgrade-cargo-deps:
+    cargo upgrade --incompatible --verbose && cargo update
+
 # Deploy to Cloudflare Workers
 deploy:
     wrangler deploy --assets static/
