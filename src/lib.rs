@@ -40,10 +40,13 @@ fn main_page() -> Markup {
                         }
                     }
                 }
-                div .(bg_main) .w-full .(text_color) .text-xl .flex .justify-center .text-center ."p-8" .pb-16 {
-                    div .flex .flex-col .justify-center .align-center .gap-y-4 {
-                        @for line in LOREM_IPSUM.lines().filter(|l| l.len() > 0) {
-                            p .max-w-prose  { (line) }
+                div .(bg_main) .w-full .(text_color) .text-xl .flex .justify-center ."p-8" .pb-16 {
+                    div .flex .flex-wrap .items-start .gap-x-16 .max-w-4xl {
+                        img .object-scale-down .max-w-72 ."w-1/2" .shrink src="/me.jpg";
+                        div .flex .flex-col .gap-y-4 .max-w-prose ."w-1/2" .grow {
+                            @for line in LOREM_IPSUM.lines().filter(|l| l.len() > 0).take(1) {
+                                p { (line) }
+                            }
                         }
                     }
                 }
