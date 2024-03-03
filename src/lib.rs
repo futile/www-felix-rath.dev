@@ -41,7 +41,7 @@ fn main_page() -> Markup {
                     }
                 }
                 main .(bg_main) .w-full .(text_color) .text-xl .flex .justify-center ."p-8" .pb-16 {
-                    div .flex .flex-wrap .items-center .gap-x-16 .max-w-5xl {
+                    div .flex .flex-wrap .items-center .gap-x-16 .gap-y-16 .max-w-5xl {
                         img .object-scale-down .max-w-72 src="/me.jpg";
                         // div .flex .flex-col .gap-y-4 .max-w-prose ."w-1/2" .grow {
                         //     @for line in LOREM_IPSUM.lines().filter(|l| l.len() > 0).take(1) {
