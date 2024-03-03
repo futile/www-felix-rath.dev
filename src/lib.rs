@@ -25,7 +25,7 @@ fn main_page() -> Markup {
                 link rel="manifest" href="/site.webmanifest";
             }
             body .grow .grid .grid-columns-1 ."[grid-template-rows:_auto_1fr_auto_auto]" .w-full .h-full .justify-stretch {
-                div .w-full .flex .flex-col ."p-8" .(bg_top) {
+                header .w-full .flex .flex-col ."p-8" .(bg_top) {
                     div .w-full .flex .justify-center {
                         h1 .font-bold .font-mono .text-9xl .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
                     }
@@ -40,7 +40,7 @@ fn main_page() -> Markup {
                         }
                     }
                 }
-                div .(bg_main) .w-full .(text_color) .text-xl .flex .justify-center ."p-8" .pb-16 {
+                main .(bg_main) .w-full .(text_color) .text-xl .flex .justify-center ."p-8" .pb-16 {
                     div .flex .flex-wrap .items-start .gap-x-16 .max-w-4xl {
                         img .object-scale-down .max-w-72 ."w-1/2" .shrink src="/me.jpg";
                         div .flex .flex-col .gap-y-4 .max-w-prose ."w-1/2" .grow {
@@ -50,7 +50,7 @@ fn main_page() -> Markup {
                         }
                     }
                 }
-                div .(bg_main) .w-full .flex .justify-center .align-center ."p-8" .text-lg .border-t-2 ."border-[#436850]" .(text_color) .gap-x-2 {
+                footer .(bg_main) .w-full .flex .justify-center .align-center ."p-8" .text-lg .border-t-2 ."border-[#436850]" .(text_color) .gap-x-2 {
                     span { "2024 by Felix Rath" }
                     span { "•" }
                     div {
