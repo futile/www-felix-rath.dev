@@ -41,11 +41,32 @@ fn main_page() -> Markup {
                     }
                 }
                 main .(bg_main) .w-full .(text_color) .text-xl .flex .justify-center ."p-8" .pb-16 {
-                    div .flex .flex-wrap .items-start .gap-x-16 .max-w-4xl {
-                        img .object-scale-down .max-w-72 ."w-1/2" .shrink src="/me.jpg";
-                        div .flex .flex-col .gap-y-4 .max-w-prose ."w-1/2" .grow {
-                            @for line in LOREM_IPSUM.lines().filter(|l| l.len() > 0).take(1) {
-                                p { (line) }
+                    div .flex .flex-wrap .items-center .gap-x-16 .max-w-5xl {
+                        img .object-scale-down .max-w-72 src="/me.jpg";
+                        // div .flex .flex-col .gap-y-4 .max-w-prose ."w-1/2" .grow {
+                        //     @for line in LOREM_IPSUM.lines().filter(|l| l.len() > 0).take(1) {
+                        //         p { (line) }
+                        //     }
+                        // }
+                        div ."w-1/2" .max-w-prose .grow {
+                            ul .flex .flex-col .gap-y-6 .text-justify {
+                                li .text-2xl .self-center { "Hi, I'm " span .(heading_color) { "Felix!" } }
+                                li { r#"
+                                    I'm a Software Developer from Germany.
+                                    My background covers low-level, research-y work in C/C++/Rust, as well as more high-level Web-related work in Scala, HTML, CSS, etc.
+                                "# }
+                                li { "I'm a big fan of strongly typed languages, and of writing edge-case free code the first time around :)" }
+                                li {
+                                    "In my previous job at "
+                                    a href="https://priceloop.ai" target="_blank" .(heading_color) { "Priceloop" };
+                                    ", I was responsible for frontend as well as backend development. "
+                                    "My tasks included working on a reactive web application in Scala (compiled to Javascript), as well as working with Scala, Postgres, AWS, and more in the backend."
+                                }
+                                li {
+                                    "Before that, I finished an M.Sc. in Computer Science at "
+                                    a href="https://www.rwth-aachen.de" target="_blank" .(heading_color) { "RWTH Aachen University" };
+                                    "."
+                                }
                             }
                         }
                     }
