@@ -40,20 +40,14 @@ fn main_page() -> Markup {
                         }
                     }
                 }
-                main .(bg_main) .w-full .(text_color) .text-xl .flex .justify-center ."p-8" .pb-16 {
-                    div .flex .flex-wrap .items-center .gap-x-16 .gap-y-16 .max-w-5xl {
+                main .(bg_main) .w-full .(text_color) .text-xl .flex .flex-col .items-center ."p-8" .pb-16 .gap-y-16 {
+                    h2 .text-6xl .self-center { "Hi, I'm " span .(heading_color) { "Felix" } "! 👋" }
+                    div .flex .flex-wrap .items-start .gap-x-16 .gap-y-16 .max-w-5xl {
                         img .object-scale-down .max-w-72 src="/me.jpg";
-                        // div .flex .flex-col .gap-y-4 .max-w-prose ."w-1/2" .grow {
-                        //     @for line in LOREM_IPSUM.lines().filter(|l| l.len() > 0).take(1) {
-                        //         p { (line) }
-                        //     }
-                        // }
                         div ."w-1/2" .max-w-prose .grow {
                             ul .flex .flex-col .gap-y-6 .text-justify {
-                                li .text-2xl .self-center { "Hi, I'm " span .(heading_color) { "Felix!" } }
                                 li { r#"
-                                    I'm a Software Developer from Germany.
-                                    My background covers low-level, research-y work in C/C++/Rust, as well as more high-level Web-related work in Scala, HTML, CSS, etc.
+                                    I'm a Software Developer with a background that covers low-level, research-y work in C/C++/Rust, as well as more high-level Web-related work in Scala, HTML, CSS, etc.
                                 "# }
                                 li { "I'm a big fan of strongly typed languages, and of writing edge-case free code the first time around :)" }
                                 li {
@@ -69,6 +63,11 @@ fn main_page() -> Markup {
                                 }
                             }
                         }
+                        // div .flex .flex-col .gap-y-4 .max-w-prose ."w-1/2" .grow {
+                        //     @for line in LOREM_IPSUM.lines().filter(|l| l.len() > 0).take(1) {
+                        //         p { (line) }
+                        //     }
+                        // }
                     }
                 }
                 footer .(bg_main) .w-full .flex .justify-center .align-center ."p-8" .text-lg .border-t-2 ."border-[#436850]" .(text_color) .gap-x-2 {
