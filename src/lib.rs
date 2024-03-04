@@ -17,6 +17,8 @@ fn main_page() -> Markup {
 
                 title { "felix-rath.dev" }
 
+                link rel="preconnect" href="https://rsms.me/";
+                link rel="stylesheet" type="text/css" href="https://rsms.me/inter/inter.css";
                 link rel="stylesheet" type="text/css" href="/out.css";
 
                 link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png";
@@ -32,7 +34,8 @@ fn main_page() -> Markup {
                     div .w-full .flex .justify-center .gap-x-2 {
                         @let text_shadow = "[text-shadow:_2px_2px_3px_black]";
                         span .text-2xl .(text_color) .(text_shadow) {
-                            span .(heading_color) { "Software Developer." }
+                            // span .(heading_color) { "Software Developer." }
+                            span { "Software Developer." }
                             r#"
                                 I like building reliable code and systems.
                                 <3 Rust, Linux, Git, NixOS, Scala, Neovim & OpenSource.
@@ -40,14 +43,14 @@ fn main_page() -> Markup {
                         }
                     }
                 }
-                main .(bg_main) .w-full .(text_color) .text-xl .flex .flex-col .items-center ."p-8" .pb-16 .gap-y-16 {
+                main .(bg_main) .w-full .(text_color) .text-xl .flex .flex-col .items-center ."p-8" .pb-16 .gap-y-12 {
                     h2 .text-6xl .self-center { "Hi, I'm " span .(heading_color) { "Felix" } "! 👋" }
                     div .flex .flex-wrap .items-start .gap-x-16 .gap-y-16 .max-w-5xl {
                         img .object-scale-down .max-w-72 src="/me.jpg";
                         div ."w-1/2" .max-w-prose .grow {
                             ul .flex .flex-col .gap-y-6 .text-justify {
                                 li { r#"
-                                    I'm a Software Developer with a background that covers low-level, research-y work in C/C++/Rust, as well as more high-level Web-related work in Scala, HTML, CSS, etc.
+                                    I'm a Software Developer with a background in low-level, research-y work using Rust/C++/C, as well as high-level Web-related work in Scala, HTML, CSS, etc.
                                 "# }
                                 li { "I'm a big fan of strongly typed languages, and of writing edge-case free code the first time around :)" }
                                 li {
