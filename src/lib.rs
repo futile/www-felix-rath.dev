@@ -15,7 +15,7 @@ fn main_page() -> Markup {
             head {
                 meta charset="utf-8";
 
-                title { "felix-rath.dev" }
+                title { "felix-rath.dev | Software Developer" }
 
                 link rel="preconnect" href="https://rsms.me/";
                 link rel="stylesheet" type="text/css" href="https://rsms.me/inter/inter.css";
