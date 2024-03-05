@@ -48,13 +48,25 @@ fn main_page() -> Markup {
                     div .flex .flex-wrap .items-start .gap-x-16 .gap-y-16 .max-w-5xl {
                         img .object-scale-down .max-w-72 src="/me.jpg";
                         div ."w-1/2" .max-w-prose .grow {
-                            section #about .flex .flex-col .gap-y-6 .text-justify {
-                                p { r#"
+                            section #about .flex .flex-col .text-justify {
+                                a href="#about" {
+                                    h3 .text-4xl .mb-12 .group {
+                                        "— About Me"
+                                        span .opacity-50 .invisible ."group-hover:visible" { " 🔗" }
+                                    }
+                                }
+                                p .mb-6 { r#"
                                     I'm a Software Developer with a background in low-level, research-y work using Rust/C++/C, as well as high-level Web-related work in Scala, HTML, CSS, etc.
                                 "# }
                                 p { "I'm a big fan of strongly typed languages, and of writing edge-case free code the first time around :)" }
                             }
-                            section #experience .mt-32 .flex .flex-col .gap-y-12 .text-justify {
+                            section #experience .mt-24 .flex .flex-col .text-justify {
+                                a href="#experience" {
+                                    h3 .text-4xl .mb-12 .group {
+                                        "— Professional Experience"
+                                        span .opacity-50 .invisible ."group-hover:visible" { " 🔗" }
+                                    }
+                                }
                                 article #priceloop {
                                     @let priceloop_url = "https://priceloop.ai";
                                     h3 .text-2xl ."[text-shadow:_1px_1px_2px_black]" .(heading_color) {
@@ -63,14 +75,14 @@ fn main_page() -> Markup {
                                             span .text-xl .(text_color) { "• Jan 2023 — April 2024" }
                                         }
                                     }
-                                    p .mt-4 {
+                                    p .mt-2 {
                                         "At "
                                         a href=(priceloop_url) target="_blank" { "Priceloop" };
                                         ", I was responsible for frontend as well as backend development."
                                         " I worked on a reactive web application in Scala (compiled to Javascript), as well as working with Scala, Postgres, AWS, and more in the backend."
                                     }
                                 }
-                                article #comsys {
+                                article #comsys .mt-12 {
                                     @let comsys_url = "https://www.comsys.rwth-aachen.de";
                                     h3 .text-2xl ."[text-shadow:_1px_1px_2px_black]" .(heading_color) {
                                         a href=(comsys_url) target="_blank" {
@@ -79,41 +91,56 @@ fn main_page() -> Markup {
                                         }
                                     }
                                     @let klee = html! { a href="https://klee.github.io/" target="_blank" .(heading_color) { "KLEE" } };
-                                    p .mt-4 {
+                                    p .mt-2 {
                                         "I started - but did not finish - a PhD in Computer Science at the "
                                         a href=(comsys_url) target="_blank" .(heading_color) { "Chair of Communication and Distributed Systems at RWTH Aachen University." };
                                         " My research was focused on automated testing and reliability for (distributed) software, particularly using Symbolic Execution with " (klee) "."
                                     }
                                     p .mt-2 {
                                         "During my time as a PhD student, I"
-                                        ul .list-disc .list-inside .ml-8 .mt-2 {
+                                        ul .list-disc .list-inside .ml-8 .mt-2 .space-y-2 {
                                             li {
                                                 "Worked on "
                                                 a href="https://dl.acm.org/doi/pdf/10.1145/3123878.3131977" target="_blank" .(heading_color) { "predicting the performance of network functions written in eBPF" }
+                                                "."
                                             }
                                             li {
                                                 "Published a paper on "
                                                 a href="https://arxiv.org/pdf/1811.12099.pdf" target="_blank" .(heading_color) { "Interoperability-Guided Testing of QUIC Implementations" }
+                                                "."
                                             }
                                             li {
                                                 "Contributed "
-                                                a href="https://github.com/klee/klee/pull/966#issuecomment-632694431" target="_blank" .(heading_color) { "open-source support for analyzing C++-programs" }
+                                                a href="https://github.com/klee/klee/pull/966#issuecomment-632694431" target="_blank" .(heading_color) { "Open-Source Support for Analyzing C++-Programs" }
                                                 " to the "
-                                                a href="https://klee.github.io" target="_blank" .(heading_color) { "KLEE Symbolic Execution Engine" }
-                                                " (I also gave a talk on this at the "
+                                                (klee) " Symbolic Execution Engine"
+                                                ". I also gave a talk on this at the "
                                                 a href="https://srg.doc.ic.ac.uk/klee21/" target="_blank" .(heading_color) { "2021 KLEE Workshop" }
                                                 ": "
                                                 a href="https://srg.doc.ic.ac.uk/klee21/talks/Rath-Cpp.pdf" target="_blank" .(heading_color) { "slides" }
                                                 ", "
                                                 a href="https://youtu.be/xaWE9rJzHVo" target="_blank" .(heading_color) { "video" }
-                                                ")."
+                                                "."
+                                            }
+                                            li {
+                                                "Presented my research on "
+                                                a href="https://srg.doc.ic.ac.uk/klee18/talks/Rath-Pointer-Tracking.pdf" target="_blank" .(heading_color) { "A Pointer-Tracking Memory Model For KLEE & Symbolic Execution" }
+                                                " at the "
+                                                a href="https://srg.doc.ic.ac.uk/klee18/" target="_blank" .(heading_color) { "2018 KLEE Workshop" }
+                                                "."
                                             }
                                         }
                                     }
+                                    p .mt-2 {
+                                        "I did not finish my PhD for multiple reasons, the major one being mental health problems/burnout."
+                                    }
                                 }
-                                article #msc {
-                                    p {
-                                        "Before that, I finished my M.Sc. in Computer Science at "
+                                article #education .mt-12 {
+                                    h3 .text-2xl ."[text-shadow:_1px_1px_2px_black]" .(heading_color) {
+                                        "Prior Education"
+                                    }
+                                    p .mt-2 {
+                                        "I finished an M.Sc. and B.Sc. in Computer Science at "
                                         a href="https://www.rwth-aachen.de" target="_blank" .(heading_color) { "RWTH Aachen University" };
                                         " in Germany."
                                     }
