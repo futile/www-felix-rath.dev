@@ -29,12 +29,12 @@ fn main_page() -> Markup {
             body .grow .grid .grid-columns-1 ."[grid-template-rows:_auto_1fr_auto_auto]" .w-full .h-full .justify-stretch {
                 header .w-full .flex .flex-col ."p-8" .(bg_top) {
                     div .w-full .flex .justify-center {
+                        // TODO: specific (mono-space) font for the heading!
                         h1 .font-bold .font-mono .text-9xl .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
                     }
                     div .w-full .flex .justify-center .gap-x-2 {
                         @let text_shadow = "[text-shadow:_2px_2px_3px_black]";
                         span .text-2xl .(text_color) .(text_shadow) {
-                            // span .(heading_color) { "Software Developer." }
                             span { "Software Developer." }
                             r#"
                                 I like building reliable code and systems.
@@ -46,7 +46,9 @@ fn main_page() -> Markup {
                 main .(bg_main) .w-full .(text_color) .text-xl .flex .flex-col .items-center ."p-8" .pb-16 .gap-y-12 {
                     h2 .text-6xl .self-center { "Hi, I'm " span .(heading_color) { "Felix" } "! 👋" }
                     div .flex .flex-wrap .items-start .gap-x-16 .gap-y-16 .max-w-5xl {
+                        // TODO: proper resizing (when the site is resized)
                         img .object-scale-down .max-w-72 src="/me.jpg";
+                        // TODO: Contact, links, etc., below the image?
                         div ."w-1/2" .max-w-prose .grow {
                             section #about .flex .flex-col .text-justify {
                                 a href="#about" {
@@ -58,6 +60,7 @@ fn main_page() -> Markup {
                                 p .mb-6 { r#"
                                     I'm a Software Developer with a background in low-level, research-y work using Rust/C++/C, as well as high-level Web-related work in Scala, HTML, CSS, etc.
                                 "# }
+                                // TODO: Daniel: "cOdE cAn'T bE eDgE-cAsE fReE" + suggestion: "code that is correct even in edge-cases"
                                 p { "I'm a big fan of strongly typed languages, and of writing edge-case free code the first time around :)" }
                             }
                             section #experience .mt-24 .flex .flex-col .text-justify {
@@ -76,6 +79,7 @@ fn main_page() -> Markup {
                                         }
                                     }
                                     p .mt-2 {
+                                        // TODO: Improve description a bit :/
                                         "At "
                                         a href=(priceloop_url) target="_blank" { "Priceloop" };
                                         ", I was responsible for frontend as well as backend development."
