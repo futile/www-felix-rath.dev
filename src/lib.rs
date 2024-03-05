@@ -35,7 +35,9 @@ fn main_page() -> Markup {
                     div .w-full .flex .justify-center .gap-x-2 {
                         @let text_shadow = "[text-shadow:_2px_2px_3px_black]";
                         span .text-2xl .(text_color) .(text_shadow) {
+                            // TODO: remove this "Software Developer?" -> probably
                             span { "Software Developer." }
+                            // TODO: maybe move this to the footer? Only the "<3"-part? suggestion from Daniel
                             r#"
                                 I like building reliable code and systems.
                                 <3 Rust, Linux, Git, NixOS, Scala, Neovim & OpenSource.
@@ -144,6 +146,7 @@ fn main_page() -> Markup {
                                         "Prior Education"
                                     }
                                     p .mt-2 {
+                                        // TODO: add info (and maybe PDFs?) about my theses
                                         "I finished an M.Sc. and B.Sc. in Computer Science at "
                                         a href="https://www.rwth-aachen.de" target="_blank" .(heading_color) { "RWTH Aachen University" };
                                         " in Germany."
