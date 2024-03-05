@@ -147,11 +147,6 @@ fn main_page() -> Markup {
                                 }
                             }
                         }
-                        // div .flex .flex-col .gap-y-4 .max-w-prose ."w-1/2" .grow {
-                        //     @for line in LOREM_IPSUM.lines().filter(|l| l.len() > 0).take(1) {
-                        //         p { (line) }
-                        //     }
-                        // }
                     }
                 }
                 footer .(bg_main) .w-full .flex .justify-center .align-center ."p-8" .text-lg .border-t-2 ."border-[#436850]" .(text_color) .gap-x-2 {
@@ -171,11 +166,3 @@ fn main_page() -> Markup {
 async fn main(_req: Request, _env: Env, _ctx: Context) -> Result<Response> {
     Response::from_html(main_page().into_string())
 }
-
-const LOREM_IPSUM: &'static str = r#"
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula ut odio eu luctus. Curabitur cursus ex vel enim scelerisque posuere. Sed purus leo, eleifend quis facilisis vitae, convallis at tortor. Suspendisse potenti. Sed condimentum, lorem eget mattis euismod, est justo malesuada leo, ornare sollicitudin felis ipsum at odio. Mauris eget lacinia ex. Morbi dignissim sapien sit amet ornare convallis. Mauris odio augue, interdum sed felis ut, egestas dictum massa. Fusce ullamcorper mattis tellus, quis cursus risus interdum quis. Suspendisse potenti. Vivamus a neque auctor, blandit enim tempor, sollicitudin quam. Nam suscipit ipsum id tortor eleifend, ut tristique lacus hendrerit. Nulla facilisi. In nec urna eget turpis pulvinar elementum. Curabitur eleifend a massa at porttitor.
-
-Fusce vulputate, turpis vitae aliquam hendrerit, nunc risus vehicula velit, pulvinar pretium ipsum massa sed risus. Aenean sed nisi vel orci finibus tincidunt. Cras lobortis massa mi, sodales tempus tortor fermentum nec. Duis at ante ornare urna scelerisque mollis. Proin bibendum at risus eget sagittis. Curabitur suscipit turpis sed nunc facilisis consectetur. Integer ac lectus ullamcorper, semper nisi at, fringilla ligula. Fusce finibus molestie diam, sed tempus quam elementum a. Donec a mauris vel eros viverra tempor et at tellus. Pellentesque vehicula consectetur magna in tincidunt. Praesent fermentum diam ut est tincidunt, vel posuere urna commodo. Morbi ut malesuada mauris. Praesent efficitur justo mattis, mattis mauris ac, feugiat augue. Morbi cursus arcu non tempus dignissim.
-
-Morbi nec consequat nibh, nec elementum sem. Mauris nec dolor id metus tincidunt rutrum a ut quam. Pellentesque laoreet elit et vulputate interdum. Cras purus arcu, pharetra quis sapien eu, pulvinar lacinia tortor. Cras mauris nunc, aliquam sed sollicitudin at, mattis a orci. Pellentesque gravida, sem et eleifend tristique, mauris quam maximus mauris, in porttitor tortor libero vitae mauris. Cras rutrum imperdiet urna. In hac habitasse platea dictumst. Etiam facilisis quam et nibh varius, sed sodales est rhoncus. Sed sit amet metus vitae ex tincidunt efficitur. Curabitur in sollicitudin justo, nec posuere neque. Aliquam turpis nulla, tempus quis rhoncus pellentesque, feugiat et magna. Duis pulvinar odio non urna gravida, quis dignissim nunc molestie. 
-"#;
