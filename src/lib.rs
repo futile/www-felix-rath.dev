@@ -51,7 +51,7 @@ fn main_page() -> Markup {
                                 "# }
                                 p { "I'm a big fan of strongly typed languages, and of covering as many edge cases as possible the first time around :)" }
                             }
-                            section #experience .mt-24 .flex .flex-col .text-justify {
+                            section #experience .mt-32 .flex .flex-col .text-justify {
                                 a href="#experience" {
                                     h3 .text-4xl .mb-12 .group {
                                         "— Professional Experience"
@@ -60,13 +60,13 @@ fn main_page() -> Markup {
                                 }
                                 article #priceloop {
                                     @let priceloop_url = "https://priceloop.ai";
-                                    h3 .text-2xl ."[text-shadow:_1px_1px_2px_black]" .(heading_color) {
+                                    h3 .text-3xl .(heading_color) {
                                         a href=(priceloop_url) target="_blank" {
                                             "Software Engineer | Priceloop "
-                                            span .text-xl .(text_color) { "• Jan 2023 — April 2024" }
+                                            span .text-2xl .(text_color) { "• Jan 2023 — April 2024" }
                                         }
                                     }
-                                    p .mt-2 {
+                                    p .mt-4 {
                                         // TODO: Improve description a bit :/
                                         "At "
                                         a href=(priceloop_url) target="_blank" { "Priceloop" };
@@ -76,14 +76,14 @@ fn main_page() -> Markup {
                                 }
                                 article #comsys .mt-12 {
                                     @let comsys_url = "https://www.comsys.rwth-aachen.de";
-                                    h3 .text-2xl ."[text-shadow:_1px_1px_2px_black]" .(heading_color) {
+                                    h3 .text-3xl .(heading_color) {
                                         a href=(comsys_url) target="_blank" {
                                             "PhD Student | COMSYS "
-                                            span .text-xl .(text_color) { "• 2016 — 2022" }
+                                            span .text-2xl .(text_color) { "• 2016 — 2022" }
                                         }
                                     }
                                     @let klee = html! { a href="https://klee.github.io/" target="_blank" .(heading_color) { "KLEE" } };
-                                    p .mt-2 {
+                                    p .mt-4 {
                                         "I started - but did not finish - a PhD in Computer Science at the "
                                         a href=(comsys_url) target="_blank" .(heading_color) { "Chair of Communication and Distributed Systems at RWTH Aachen University." };
                                         " My research was focused on automated testing and reliability for (distributed) software, particularly using Symbolic Execution with " (klee) "."
@@ -128,10 +128,10 @@ fn main_page() -> Markup {
                                     }
                                 }
                                 article #education .mt-12 {
-                                    h3 .text-2xl ."[text-shadow:_1px_1px_2px_black]" .(heading_color) {
+                                    h3 .text-3xl .(heading_color) {
                                         "Prior Education"
                                     }
-                                    p .mt-2 {
+                                    p .mt-4 {
                                         // TODO: add info (and maybe PDFs?) about my theses
                                         "I finished an M.Sc. and B.Sc. in Computer Science at "
                                         a href="https://www.rwth-aachen.de" target="_blank" .(heading_color) { "RWTH Aachen University" };
