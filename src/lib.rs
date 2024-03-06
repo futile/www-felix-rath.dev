@@ -19,6 +19,7 @@ fn main_page() -> Markup {
 
                 link rel="preconnect" href="https://rsms.me/";
                 link rel="stylesheet" type="text/css" href="https://rsms.me/inter/inter.css";
+
                 link rel="stylesheet" type="text/css" href="/out.css";
 
                 link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png";
@@ -28,20 +29,14 @@ fn main_page() -> Markup {
             }
             body .grow .grid .grid-columns-1 ."[grid-template-rows:_auto_1fr_auto_auto]" .w-full .h-full .justify-stretch {
                 header .w-full .flex .flex-col ."p-8" .(bg_top) {
-                    div .w-full .flex .justify-center {
-                        // TODO: specific (mono-space) font for the heading!
-                        h1 .font-bold .font-mono .text-9xl .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
+                    div .w-full .flex .flex-col .justify-center .items-center {
+                        h1 ."font-[JetBrainsMono]" .font-bold .text-9xl .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
                     }
-                    div .w-full .flex .justify-center .gap-x-2 {
+                    div .w-full .flex .justify-center .gap-x-2 .pt-2 {
                         @let text_shadow = "[text-shadow:_2px_2px_3px_black]";
-                        span .text-2xl .(text_color) .(text_shadow) {
-                            // TODO: remove this "Software Developer?" -> probably
-                            span { "Software Developer." }
+                        span .text-4xl .(text_color) .(text_shadow) {
                             // TODO: maybe move this to the footer? Only the "<3"-part? suggestion from Daniel
-                            r#"
-                                I like building reliable code and systems.
-                                <3 Rust, Linux, Git, NixOS, Scala, Neovim & OpenSource.
-                            "#
+                            r#"I build reliable code and systems"#
                         }
                     }
                 }
