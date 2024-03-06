@@ -49,8 +49,7 @@ fn main_page() -> Markup {
                                 p .mb-6 { r#"
                                     I'm a Software Developer with a background in low-level, research-y work using Rust/C++/C, as well as high-level Web-related work in Scala, HTML, CSS, etc.
                                 "# }
-                                // TODO: Daniel: "cOdE cAn'T bE eDgE-cAsE fReE" + suggestion: "code that is correct even in edge-cases"
-                                p { "I'm a big fan of strongly typed languages, and of writing edge-case free code the first time around :)" }
+                                p { "I'm a big fan of strongly typed languages, and of covering as many edge cases as possible the first time around :)" }
                             }
                             section #experience .mt-24 .flex .flex-col .text-justify {
                                 a href="#experience" {
