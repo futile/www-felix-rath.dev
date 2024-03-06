@@ -28,19 +28,11 @@ fn main_page() -> Markup {
                 link rel="manifest" href="/site.webmanifest";
             }
             body .grow .grid .grid-columns-1 ."[grid-template-rows:_auto_1fr_auto_auto]" .w-full .h-full .justify-stretch {
-                header .w-full .flex .flex-col ."p-8" .(bg_top) {
-                    div .w-full .flex .flex-col .justify-center .items-center {
-                        h1 ."font-[JetBrainsMono]" .font-bold .text-9xl .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
-                    }
-                    div .w-full .flex .justify-center .gap-x-2 .pt-2 {
-                        @let text_shadow = "[text-shadow:_2px_2px_3px_black]";
-                        span .text-4xl .(text_color) .(text_shadow) {
-                            // TODO: maybe move this to the footer? Only the "<3"-part? suggestion from Daniel
-                            r#"I build reliable code and systems"#
-                        }
-                    }
+                header .w-full .flex .flex-col ."p-8" .pb-6 .(bg_top) .justify-center .items-center .gap-y-2 {
+                    h1 ."font-[JetBrainsMono]" .font-bold .text-9xl .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
+                    span .text-4xl .(text_color) ."[text-shadow:_2px_2px_3px_black]" { "I build reliable code and systems" }
                 }
-                main .(bg_main) .w-full .(text_color) .text-xl .flex .flex-col .items-center ."p-8" .pb-16 .gap-y-12 {
+                main .(bg_main) .w-full .(text_color) .text-xl .flex .flex-col .items-center ."p-8" .pt-6 .pb-16 .gap-y-12 {
                     h2 .text-6xl .self-center { "Hi, I'm " span .(heading_color) { "Felix" } "! 👋" }
                     div .flex .flex-wrap .items-start .gap-x-16 .gap-y-16 .max-w-5xl {
                         // TODO: proper resizing (when the site is resized)
@@ -152,12 +144,12 @@ fn main_page() -> Markup {
                     }
                 }
                 footer .(bg_main) .w-full .flex .justify-center .align-center ."p-8" .text-lg .border-t-2 ."border-[#436850]" .(text_color) .gap-x-2 {
-                    span { "2024 by Felix Rath" }
-                    span { "•" }
                     div {
                         span { "Source for this site on " }
                         a href="https://github.com/futile/www-felix-rath.dev" target="_blank" .(heading_color) { "github ↗" };
                     }
+                    span { "•" }
+                    span { "<3 Rust, Linux, Git, NixOS, Scala, Neovim & OpenSource" }
                 }
             }
         }
