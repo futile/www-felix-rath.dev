@@ -13,6 +13,11 @@
       font-family: InterVariable, sans-serif;
     }
   }
+
+  /* underline for hovered links (text). but not ideal currently. */
+  /* a:hover { */
+  /*   @apply underline decoration-1 */
+  /* } */
 }
 
 @font-face {
