@@ -44,17 +44,28 @@ fn main_page() -> Markup {
                             }
                         }
                         div ."w-1/2" .max-w-prose .grow {
-                            section #about .flex .flex-col .text-justify {
+                            section #about .flex .flex-col .text-justify .gap-6 {
                                 a href="#about" {
-                                    h3 .text-4xl .mb-12 .group {
+                                    h3 .text-4xl .mb-6 .group {
                                         "— About Me"
                                         span .opacity-50 .invisible ."group-hover:visible" { " 🔗" }
                                     }
                                 }
-                                p .mb-6 { r#"
-                                    I'm a Software Developer with a background in low-level, research-y work using Rust/C++/C, as well as high-level Web-related work in Scala, HTML, CSS, etc.
+                                p { r#"
+                                    I am a Software Developer with a strong background in low-level, research-y work using Rust/C++/C, as well as in high-level Web-related work in Scala(JS), Rust, HTML, CSS, etc.
                                 "# }
-                                p { "I'm a big fan of strongly typed languages, and of covering as many edge cases as possible the first time around :)" }
+                                p { r#"
+                                    New programming languages and technologies are things I pick up quickly, and I enjoy working with modern stacks and efficient technologies most.
+                                    Recently I have also started to enjoy frontend work a lot, especially Web-related.
+                                "# }
+                                p { r#"
+                                    In the past I have contributed to various open-source projects, including, e.g., the Rust-compiler and NixOS/nixpkgs.
+                                    I majorly enjoy engaging with, and participating in, all the communities that open-source has produced!
+                                "# }
+                                p { r#"
+                                    I am a big fan of strongly typed languages, correctness, and of covering as many edge cases as possible before (my) code hits production.
+                                    I also like to work in a team and understand the value of clear, early and regular communication and feedback, from other developers as well as from more design- and/or product-related roles.
+                                "# }
                             }
                             section #experience .mt-32 .flex .flex-col .text-justify {
                                 a href="#experience" {
