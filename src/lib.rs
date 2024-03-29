@@ -100,7 +100,7 @@ fn main_page() -> Markup {
                                     }
                                     @let klee = html! { a href="https://klee.github.io/" target="_blank" .(heading_color) { "KLEE" } };
                                     p .mt-4 {
-                                        "I started - but did not finish - a PhD in Computer Science at the "
+                                        "I started (but did not finish) a PhD in Computer Science at the "
                                         a href=(comsys_url) target="_blank" .(heading_color) { "Chair of Communication and Distributed Systems at RWTH Aachen University." };
                                         " My research was focused on automated testing and reliability for (distributed) software, particularly using Symbolic Execution with " (klee) "."
                                     }
@@ -138,9 +138,6 @@ fn main_page() -> Markup {
                                                 "."
                                             }
                                         }
-                                    }
-                                    p .mt-2 {
-                                        "I did not finish my PhD for multiple reasons, the major one being mental health problems/burnout."
                                     }
                                 }
                                 article #education .mt-12 {
