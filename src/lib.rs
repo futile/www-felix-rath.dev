@@ -66,6 +66,14 @@ fn main_page() -> Markup {
                                     I am a big fan of strongly typed languages, correctness, and of covering as many edge cases as possible before (my) code hits production.
                                     I also like to work in a team and understand the value of clear, early and regular communication and feedback, from other developers as well as from more design- and/or product-related roles.
                                 "# }
+                                p { r#"
+                                    In my free time I like to travel (sometimes Digital Nomad-style), go bouldering or climbing, and read up on the newest programming languages and technologies.
+                                    My main OS nowadays is NixOS, which I really enjoy.
+                                    You can check out my system configuration 
+                                    "#
+                                    a href="https://github.com/futile/nixos-config" .(heading_color) { "here" }
+                                    "."
+                                }
                             }
                             section #experience .mt-32 .flex .flex-col .text-justify {
                                 a href="#experience" {
@@ -100,7 +108,7 @@ fn main_page() -> Markup {
                                     }
                                     @let klee = html! { a href="https://klee.github.io/" target="_blank" .(heading_color) { "KLEE" } };
                                     p .mt-4 {
-                                        "I started (but did not finish) a PhD in Computer Science at the "
+                                        "I started (but did not finish) - a PhD in Computer Science at the "
                                         a href=(comsys_url) target="_blank" .(heading_color) { "Chair of Communication and Distributed Systems at RWTH Aachen University." };
                                         " My research was focused on automated testing and reliability for (distributed) software, particularly using Symbolic Execution with " (klee) "."
                                     }
