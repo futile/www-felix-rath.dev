@@ -12,7 +12,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 maud = "0.26.0"
-worker = "0.0.18"
+worker = "0.0.24"
 
 [profile.release]
 opt-level = "s" # optimize for size
