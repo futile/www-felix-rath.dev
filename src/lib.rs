@@ -14,7 +14,9 @@ fn main_page() -> Markup {
         html .min-h-full .flex .flex-col {
             head {
                 meta charset="utf-8";
-                meta name="viewport" content="width=device-width";
+
+                // Moz on viewport: https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag
+                meta name="viewport" content="width=device-width, initial-scale=1";
 
                 title { "felix-rath.dev | Software Developer" }
 
