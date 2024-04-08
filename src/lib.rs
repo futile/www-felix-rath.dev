@@ -35,7 +35,7 @@ fn main_page() -> Markup {
                     h1 ."font-[JetBrainsMono]" .font-bold ."text-[57px]" ."sm:text-9xl" .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
                     span ."text-[22px]" ."sm:text-4xl" .(text_color) ."[text-shadow:_2px_2px_3px_black]" { "I build reliable code and systems" }
                 }
-                main .(bg_main) .w-full .(text_color) .text-lg ."sm:text-xl" .flex .flex-col .items-center ."p-2" ."pt-4" ."gap-y-6" ."sm:p-8" ."sm:pt-6" ."sm:pb-16" ."sm:gap-y-12" {
+                main .(bg_main) .w-full .(text_color) .text-base ."sm:text-xl" .flex .flex-col .items-center ."p-2" ."pt-4" ."gap-y-6" ."sm:p-8" ."sm:pt-6" ."sm:pb-16" ."sm:gap-y-12" {
                     h2 ."text-4xl" ."sm:text-6xl" .self-center { "Hi, I'm " span .(heading_color) { "Felix" } "! 👋" }
                     div .flex .flex-wrap .items-start .gap-16 .max-w-5xl .self-center {
                         // TODO: proper resizing (when the site is resized)
@@ -46,9 +46,15 @@ fn main_page() -> Markup {
                             }
                         }
                         div ."w-1/2" .max-w-prose .grow {
+                            @let heading_size = "text-2xl";
+                            @let sm_heading_size = "sm:text-4xl";
+                            @let sub_heading_size = "text-xl";
+                            @let sm_sub_heading_size = "sm:text-3xl";
+                            @let sub2_heading_size = "text-lg";
+                            @let sm_sub2_heading_size = "sm:text-2xl";
                             section #about .flex .flex-col .text-justify .gap-6 {
                                 a href="#about" {
-                                    h3 .text-2xl ."sm:text-4xl" .mb-6 .group {
+                                    h3 .(heading_size) .(sm_heading_size) .mb-6 .group {
                                         "— About Me"
                                         span .opacity-50 .invisible ."group-hover:visible" { " 🔗" }
                                     }
@@ -77,19 +83,19 @@ fn main_page() -> Markup {
                                     "."
                                 }
                             }
-                            section #experience .mt-32 .flex .flex-col .text-justify {
+                            section #experience .mt-16 ."sm:mt-32" .flex .flex-col .text-justify {
                                 a href="#experience" {
-                                    h3 .text-2xl ."sm:text-4xl" .mb-12 .group {
+                                    h3 .(heading_size) .(sm_heading_size) .mb-12 .group {
                                         "— Professional Experience"
                                         span .opacity-50 .invisible ."group-hover:visible" { " 🔗" }
                                     }
                                 }
                                 article #priceloop {
                                     @let priceloop_url = "https://priceloop.ai";
-                                    h3 .text-3xl .(heading_color) {
+                                    h3 .(sub_heading_size) .(sm_sub_heading_size) .(heading_color) {
                                         a href=(priceloop_url) target="_blank" {
                                             "Software Engineer | Priceloop "
-                                            span .text-2xl .(text_color) { "• Jan 2023 — April 2024" }
+                                            span .(sub2_heading_size) .(sm_sub2_heading_size) .(text_color) { "• Jan 2023 — April 2024" }
                                         }
                                     }
                                     p .mt-4 {
@@ -102,10 +108,10 @@ fn main_page() -> Markup {
                                 }
                                 article #comsys .mt-12 {
                                     @let comsys_url = "https://www.comsys.rwth-aachen.de";
-                                    h3 .text-3xl .(heading_color) {
+                                    h3 .(sub_heading_size) .(sm_sub_heading_size) .(heading_color) {
                                         a href=(comsys_url) target="_blank" {
                                             "PhD Student | COMSYS "
-                                            span .text-2xl .(text_color) { "• 2016 — 2022" }
+                                            span .(sub2_heading_size) .(sm_sub2_heading_size) .(text_color) { "• 2016 — 2022" }
                                         }
                                     }
                                     @let klee = html! { a href="https://klee.github.io/" target="_blank" .(heading_color) { "KLEE" } };
@@ -151,7 +157,7 @@ fn main_page() -> Markup {
                                     }
                                 }
                                 article #education .mt-12 {
-                                    h3 .text-3xl .(heading_color) {
+                                    h3 .(sub_heading_size) .(sm_sub_heading_size) .(heading_color) {
                                         "Prior Education"
                                     }
                                     p .mt-4 {
