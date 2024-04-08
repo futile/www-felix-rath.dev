@@ -171,7 +171,7 @@ fn main_page() -> Markup {
                         }
                     }
                 }
-                footer .(bg_main) .w-full .flex .flex-wrap .justify-center .align-center ."p-2" ."sm:p-8" .text-lg .border-t-2 ."border-[#436850]" .(text_color) .gap-x-2 {
+                footer .(bg_main) .w-full .flex .flex-wrap .justify-center .align-center ."p-2" ."py-6" ."sm:p-8" .text-lg .border-t-2 ."border-[#436850]" .(text_color) .gap-x-2 {
                     div {
                         span { "Source for this site on " }
                         a href="https://github.com/futile/www-felix-rath.dev" target="_blank" .(heading_color) { "github ↗" };
