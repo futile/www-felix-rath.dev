@@ -31,24 +31,24 @@ fn main_page() -> Markup {
                 link rel="manifest" href="/site.webmanifest";
             }
             body .grow .grid .grid-columns-1 ."[grid-template-rows:_auto_1fr_auto_auto]" .w-full .h-full .justify-stretch {
-                header .w-full .flex .flex-col ."p-8" .pb-6 .(bg_top) .justify-center .items-center .gap-y-2 {
-                    h1 ."font-[JetBrainsMono]" .font-bold .text-9xl .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
-                    span .text-4xl .(text_color) ."[text-shadow:_2px_2px_3px_black]" { "I build reliable code and systems" }
+                header .w-full .flex .flex-col ."p-2" ."sm:p-8" ."sm:pb-6" .(bg_top) .justify-center .items-center ."sm:gap-y-2" {
+                    h1 ."font-[JetBrainsMono]" .font-bold ."text-[54px]" ."sm:text-9xl" .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
+                    span ."text-[22px]" ."sm:text-4xl" .(text_color) ."[text-shadow:_2px_2px_3px_black]" { "I build reliable code and systems" }
                 }
-                main .(bg_main) .w-full .(text_color) .text-xl .flex .flex-col .items-center ."p-8" .pt-6 .pb-16 .gap-y-12 {
-                    h2 .text-6xl .self-center { "Hi, I'm " span .(heading_color) { "Felix" } "! 👋" }
-                    div .flex .flex-wrap .items-start .gap-x-16 .gap-y-16 .max-w-5xl {
+                main .(bg_main) .w-full .(text_color) .text-lg ."sm:text-xl" .flex .flex-col .items-center ."p-2" ."sm:p-8" ."sm:pt-6" ."sm:pb-16" .gap-y-12 {
+                    h2 ."text-4xl" ."sm:text-6xl" .self-center { "Hi, I'm " span .(heading_color) { "Felix" } "! 👋" }
+                    div .flex .flex-wrap .items-start .gap-16 .max-w-5xl .self-center {
                         // TODO: proper resizing (when the site is resized)
-                        div .flex .flex-col .gap-y-12 .items-center .justify-center {
-                            img .object-scale-down .max-w-72 src="/me.jpg";
-                            div .flex .gap-4 .w-full .justify-evenly {
+                        div .flex .flex-col .gap-y-12 .items-center .justify-center .justify-self-center {
+                            img .object-scale-down .max-w-72 .self-center src="/me.jpg";
+                            div .flex .gap-4 .justify-evenly .w-full {
                                 (contact_icons())
                             }
                         }
                         div ."w-1/2" .max-w-prose .grow {
                             section #about .flex .flex-col .text-justify .gap-6 {
                                 a href="#about" {
-                                    h3 .text-4xl .mb-6 .group {
+                                    h3 .text-2xl ."sm:text-4xl" .mb-6 .group {
                                         "— About Me"
                                         span .opacity-50 .invisible ."group-hover:visible" { " 🔗" }
                                     }
@@ -79,7 +79,7 @@ fn main_page() -> Markup {
                             }
                             section #experience .mt-32 .flex .flex-col .text-justify {
                                 a href="#experience" {
-                                    h3 .text-4xl .mb-12 .group {
+                                    h3 .text-2xl ."sm:text-4xl" .mb-12 .group {
                                         "— Professional Experience"
                                         span .opacity-50 .invisible ."group-hover:visible" { " 🔗" }
                                     }
