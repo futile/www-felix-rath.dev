@@ -39,9 +39,9 @@ fn main_page() -> Markup {
                     h2 ."text-4xl" ."sm:text-6xl" .self-center { "Hi, I'm " span .(heading_color) { "Felix" } "! 👋" }
                     div .flex .flex-wrap .items-start .gap-16 .max-w-5xl .self-center {
                         // TODO: proper resizing (when the site is resized)
-                        div .flex .flex-col .gap-y-12 .items-center .justify-center .justify-self-center {
+                        div .flex .flex-col .gap-y-12 .items-center .justify-center .justify-self-center .grow ."sm:grow-0" {
                             img .object-scale-down .max-w-72 .self-center src="/me.jpg";
-                            div .flex .gap-4 .justify-evenly .w-full {
+                            div .flex .gap-4 .justify-evenly .max-w-72 .w-full {
                                 (contact_icons())
                             }
                         }
