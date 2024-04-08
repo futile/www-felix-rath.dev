@@ -35,7 +35,7 @@ fn main_page() -> Markup {
                     h1 ."font-[JetBrainsMono]" .font-bold ."text-[57px]" ."sm:text-9xl" .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
                     span ."text-[22px]" ."sm:text-4xl" .(text_color) ."[text-shadow:_2px_2px_3px_black]" { "I build reliable code and systems" }
                 }
-                main .(bg_main) .w-full .(text_color) .text-base ."sm:text-xl" .flex .flex-col .items-center ."p-2" ."pt-4" ."gap-y-6" ."sm:p-8" ."sm:pt-6" ."sm:pb-16" ."sm:gap-y-12" {
+                main .(bg_main) .w-full .(text_color) .text-base ."sm:text-xl" .flex .flex-col .items-center ."p-2" ."pt-4" ."pb-8" ."gap-y-6" ."sm:p-8" ."sm:pt-6" ."sm:pb-16" ."sm:gap-y-12" {
                     h2 ."text-4xl" ."sm:text-6xl" .self-center { "Hi, I'm " span .(heading_color) { "Felix" } "! 👋" }
                     div .flex .flex-wrap .items-start .gap-16 .max-w-5xl .self-center {
                         // TODO: proper resizing (when the site is resized)
@@ -171,15 +171,17 @@ fn main_page() -> Markup {
                         }
                     }
                 }
-                footer .(bg_main) .w-full .flex .justify-center .align-center ."p-8" .text-lg .border-t-2 ."border-[#436850]" .(text_color) .gap-x-2 {
+                footer .(bg_main) .w-full .flex .flex-wrap .justify-center .align-center ."p-2" ."sm:p-8" .text-lg .border-t-2 ."border-[#436850]" .(text_color) .gap-x-2 {
                     div {
                         span { "Source for this site on " }
                         a href="https://github.com/futile/www-felix-rath.dev" target="_blank" .(heading_color) { "github ↗" };
                     }
                     span { "•" }
-                    (contact_icons())
+                    div .flex .flex-wrap .gap-x-2 {
+                        (contact_icons())
+                    }
                     span { "•" }
-                    span { "<3 Rust, Linux, Git, NixOS, Scala, Neovim & OpenSource" }
+                    span .text-center { "<3 Rust, Linux, Git, NixOS, Scala, Neovim & OpenSource" }
                 }
             }
         }
