@@ -31,11 +31,11 @@ fn main_page() -> Markup {
                 link rel="manifest" href="/site.webmanifest";
             }
             body .grow .grid .grid-columns-1 ."[grid-template-rows:_auto_1fr_auto_auto]" .w-full .h-full .justify-stretch {
-                header .w-full .flex .flex-col ."p-2" ."sm:p-8" ."sm:pb-6" .(bg_top) .justify-center .items-center ."sm:gap-y-2" {
-                    h1 ."font-[JetBrainsMono]" .font-bold ."text-[54px]" ."sm:text-9xl" .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
+                header .w-full .flex .flex-col ."p-2" ."pb-4" ."sm:p-8" ."sm:pb-6" .(bg_top) .justify-center .items-center ."sm:gap-y-2" {
+                    h1 ."font-[JetBrainsMono]" .font-bold ."text-[57px]" ."sm:text-9xl" .(heading_color) ."[text-shadow:_2px_2px_3px_black]" { "felix-rath" }
                     span ."text-[22px]" ."sm:text-4xl" .(text_color) ."[text-shadow:_2px_2px_3px_black]" { "I build reliable code and systems" }
                 }
-                main .(bg_main) .w-full .(text_color) .text-lg ."sm:text-xl" .flex .flex-col .items-center ."p-2" ."sm:p-8" ."sm:pt-6" ."sm:pb-16" .gap-y-12 {
+                main .(bg_main) .w-full .(text_color) .text-lg ."sm:text-xl" .flex .flex-col .items-center ."p-2" ."pt-4" ."gap-y-6" ."sm:p-8" ."sm:pt-6" ."sm:pb-16" ."sm:gap-y-12" {
                     h2 ."text-4xl" ."sm:text-6xl" .self-center { "Hi, I'm " span .(heading_color) { "Felix" } "! 👋" }
                     div .flex .flex-wrap .items-start .gap-16 .max-w-5xl .self-center {
                         // TODO: proper resizing (when the site is resized)
