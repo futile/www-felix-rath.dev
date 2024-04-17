@@ -63,7 +63,7 @@ fn main_page() -> Markup {
                                     I am a Software Developer with a strong background in low-level, research-y work using Rust/C++/C, as well as in high-level Web-related work in Scala(JS), Rust, HTML, CSS, etc.
                                 "# }
                                 p { r#"
-                                    New programming languages and technologies are things I pick up quickly, and I enjoy working with modern stacks and efficient technologies most.
+                                    I enjoy working with modern stacks and efficient technologies most, and new programming languages and technologies are things I pick up quickly.
                                     Recently I have also started to enjoy frontend work a lot, especially Web-related.
                                 "# }
                                 p { r#"
