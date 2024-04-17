@@ -115,6 +115,9 @@ fn main_page() -> Markup {
                                                 "Worked with ScalaJS and the reactive Outwatch-library in the frontend, and Scala in the backend to realize the platform."
                                             }
                                             li {
+                                                "Worked with Rust to maintain and extend an important backend service of our platform."
+                                            }
+                                            li {
                                                 "Maintained Continuous Integration and Deployment pipelines (using GitLab CI)."
                                             }
                                             li {
