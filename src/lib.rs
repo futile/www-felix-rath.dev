@@ -105,6 +105,26 @@ fn main_page() -> Markup {
                                         ", I was responsible for frontend as well as backend development."
                                         " I worked on a reactive web application in Scala (compiled to Javascript), as well as working with Scala, Postgres, AWS, and more in the backend."
                                     }
+                                    p .mt-2 {
+                                        "During my time at Priceloop, I"
+                                        ul .list-disc .list-inside .ml-8 .mt-2 .space-y-2 {
+                                            li {
+                                                "Helped build a no-code platform for pricing calculations and optimizations."
+                                            }
+                                            li {
+                                                "Worked with ScalaJS and the reactive Outwatch-library in the frontend, and Scala in the backend to realize the platform."
+                                            }
+                                            li {
+                                                "Maintained Continuous Integration and Deployment pipelines (using GitLab CI)."
+                                            }
+                                            li {
+                                                "Worked with AWS services (e.g., S3, RDS, EC2, Lambda), which were managed and deployed using terraform."
+                                            }
+                                            li {
+                                                "Performed extensive work in building complex SQL-queries (for PostgreSQL), including building an abstraction to ensure correct transaction isolation levels for the platform."
+                                            }
+                                        }
+                                    }
                                 }
                                 article #comsys .mt-12 {
                                     @let comsys_url = "https://www.comsys.rwth-aachen.de";
