@@ -74,12 +74,25 @@ fn main_page() -> Markup {
                                     I am a big fan of strongly typed languages, correctness, and of covering as many edge cases as possible before (my) code hits production.
                                     I also like to work in a team and understand the value of clear, early and regular communication and feedback, from other developers as well as from more design- and/or product-related roles.
                                 "# }
+                                @let link_color = heading_color;
                                 p { r#"
                                     In my free time I like to travel (sometimes Digital Nomad-style), go bouldering or climbing, and read up on the newest programming languages and technologies.
                                     My main OS nowadays is NixOS, which I really enjoy.
                                     You can check out my system configuration 
                                     "#
-                                    a href="https://github.com/futile/nixos-config" .(heading_color) { "here" }
+                                    a href="https://github.com/futile/nixos-config" target="_blank" .(link_color) { "here" }
+                                    "."
+                                }
+                                p { "This website is built using "
+                                    a href="https://www.rust-lang.org/" target="_blank" .(link_color) { "Rust" }
+                                    ", "
+                                    a href="https://maud.lambda.xyz/" target="_blank" .(link_color) { "Maud" }
+                                    ", "
+                                    a href="https://tailwindcss.com/" target="_blank" .(link_color) { "Tailwindcss" }
+                                    " and "
+                                    a href="https://workers.cloudflare.com/" target="_blank" .(link_color) { "Cloudflare Workers" }
+                                    ". The source code is available on "
+                                    a href="https://github.com/futile/www-felix-rath.dev" target="_blank" .(link_color) { "github" }
                                     "."
                                 }
                             }
