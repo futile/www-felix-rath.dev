@@ -6,7 +6,7 @@ fn main_page() -> Markup {
     let bg_main = "bg-[#12372A]";
     let text_color = "text-[#ADBC9F]";
     let heading_color = "text-[#FBFADA]";
-    let text_dark = "text-[#12372A]";
+    // let text_dark = "text-[#12372A]";
 
     html! {
         (DOCTYPE)
