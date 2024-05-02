@@ -203,6 +203,9 @@ fn main_page() -> Markup {
                                         " in Germany."
                                     }
                                 }
+                                p .mt-12 .font-semibold .(heading_color) {
+                                    a href="/CV-Felix_Rath-Software_Engineer.pdf" type="application/pdf" target="_blank" { "View full CV (pdf) ↗" }
+                                }
                             }
                         }
                     }
