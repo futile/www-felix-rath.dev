@@ -1,3 +1,5 @@
+use std::collections::linked_list;
+
 use maud::{html, Markup, DOCTYPE};
 use worker::*;
 
@@ -7,6 +9,7 @@ fn main_page() -> Markup {
     let text_color = "text-[#ADBC9F]";
     let heading_color = "text-[#FBFADA]";
     // let text_dark = "text-[#12372A]";
+    let link_color = heading_color;
 
     html! {
         (DOCTYPE)
@@ -74,7 +77,6 @@ fn main_page() -> Markup {
                                     I am a big fan of strongly typed languages, correctness, and of covering as many edge cases as possible before (my) code hits production.
                                     I also like to work in a team and understand the value of clear, early and regular communication and feedback, from other developers as well as from more design- and/or product-related roles.
                                 "# }
-                                @let link_color = heading_color;
                                 p { r#"
                                     In my free time I like to travel (sometimes Digital Nomad-style), go bouldering or climbing, and read up on the newest programming languages and technologies.
                                     My main OS nowadays is NixOS, which I really enjoy.
@@ -114,7 +116,7 @@ fn main_page() -> Markup {
                                     p .mt-4 {
                                         // TODO: Improve description a bit :/
                                         "At "
-                                        a href=(priceloop_url) target="_blank" { "Priceloop" };
+                                        a href=(priceloop_url) target="_blank" .(link_color) { "Priceloop" };
                                         ", I was responsible for frontend as well as backend development."
                                         " I worked on a reactive web application in Scala (compiled to Javascript), as well as working with Scala, Postgres, AWS, and more in the backend."
                                     }
@@ -125,7 +127,11 @@ fn main_page() -> Markup {
                                                 "Helped build a no-code platform for pricing calculations and optimizations."
                                             }
                                             li {
-                                                "Worked with ScalaJS and the reactive Outwatch-library in the frontend, and Scala in the backend to realize the platform."
+                                                "Worked with "
+                                                a href="https://www.scala-js.org/" target="_blank" .(link_color) { "ScalaJS" }
+                                                " and the reactive "
+                                                a href="https://outwatch.github.io/" target="_blank" .(link_color) { "Outwatch-library" }
+                                                " in the frontend, and Scala in the backend to realize the platform."
                                             }
                                             li {
                                                 "Worked with Rust to maintain and extend an important backend service of our platform."
