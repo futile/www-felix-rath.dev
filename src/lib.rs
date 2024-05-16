@@ -1,5 +1,3 @@
-use std::collections::linked_list;
-
 use maud::{html, Markup, DOCTYPE};
 use worker::*;
 
