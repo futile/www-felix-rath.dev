@@ -131,7 +131,7 @@ fn main_page() -> Markup {
                                                 "Worked with Rust to maintain and extend an important backend service of our platform."
                                             }
                                             li {
-                                                "Maintained Continuous Integration and Deployment pipelines (using GitLab CI)."
+                                                "Maintained Continuous Integration and Deployment pipelines (using GitHub CI)."
                                             }
                                             li {
                                                 "Worked with AWS services (e.g., S3, RDS, EC2, Lambda), which were managed and deployed using terraform."
