@@ -12,7 +12,7 @@ _default:
 
 # Serve site locally (for development)
 dev-serve:
-    wrangler dev --live-reload --env dev --assets ./static
+    wrangler dev --live-reload
 
 # Build and watch tailwind CSS
 dev-build-tailwind:
@@ -24,10 +24,10 @@ upgrade-cargo-deps:
 
 # Deploy to Cloudflare Workers
 deploy:
-    wrangler deploy --assets static/
+    wrangler deploy
 
 # Run zellij as a dev-environment, with automated rebuilds etc.
 dev-zellij:
-    zellij --session "www-felix-rath-dot-dev" --layout "support/zellij-dev-layout.kdl" options --session-serialization=false
+    zellij --session "www-felix-rath-dot-dev" --new-session-with-layout "support/zellij-dev-layout.kdl" options --session-serialization=false
     # wrangler somehow survives the zellij shutdown, so kill it manually.
     killall wrangler || true
