@@ -1,9 +1,12 @@
 name = "felix-rath-dot-dev"
-main = "build/worker/shim.mjs"
-compatibility_date = "2023-06-28"
+main = "build/index.js"
+compatibility_date = "2026-10-30"
 
 [build]
 command = "worker-build --release"
 
-[env.dev]
-build = { command = "worker-build --dev" }
+[assets]
+directory = "./static"
+
+# Worker Previews (`wrangler preview`); empty = same settings as production
+[previews]

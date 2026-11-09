@@ -12,7 +12,7 @@ _default:
 
 # Serve site locally (for development)
 dev-serve:
-    wrangler dev --live-reload --env dev --assets ./static
+    wrangler dev --live-reload
 
 # Build and watch tailwind CSS
 dev-build-tailwind:
@@ -24,7 +24,7 @@ upgrade-cargo-deps:
 
 # Deploy to Cloudflare Workers
 deploy:
-    wrangler deploy --assets static/
+    wrangler deploy
 
 # Run zellij as a dev-environment, with automated rebuilds etc.
 dev-zellij:
